@@ -1,0 +1,163 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+    margin: 0;
+    line-height: 1.6;
+    height: 100%;
+    width: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.first{
+    margin-top: 17%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.first button{
+    margin: 5px 20px ;
+    box-shadow: #555 2px 3px 4px ;
+}
+
+.first h1 span{
+    color: #4a90e2;
+}
+.first h1{
+    font-size: 70px;
+    text-shadow: #555 2px 2px 2px ;
+}
+/* Dropdown and Button */
+
+
+button {
+    background-color: #4a90e2;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2b6293;
+}
+
+/* CodeMirror Editor */
+#editor {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    height: 300px;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+/* Output Section */
+h3 {
+    color: #555;
+    margin-top: 20px;
+}
+#html , #css , #js{
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 300px;
+    font-size: 14px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    height: 300px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+pre {
+    background-color: #1e1e2f;
+    color: #d4d4d4;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    select {
+        font-size: 14px;
+    }
+
+    #editor {
+        height: 200px;
+    }
+
+    pre {
+        font-size: 14px;
+    }
+}
+
+#editor {
+    border: 1px solid #ddd;
+    height: 300px;
+    margin-top: 10px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+pre {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.second{
+    display: none;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.output-container {
+    width: 50%;
+    background: #f3f3f3;
+    margin-left: 20px;
+}
+
+.text{
+    width: 50%;
+}
+
+.thirdIn{
+        display: flex;
+        flex-direction: row;
+}
+
+.third{
+    visibility: hidden;
+}

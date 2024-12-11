@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Code Editor By HC</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- CodeMirror -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/mode/clike/clike.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.12/mode/python/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/edit/matchbrackets.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.5/addon/edit/closebrackets.min.js"></script>
+    <!-- Skulpt for Python -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/skulpt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/skulpt@1.2.0/skulpt-stdlib.min.js"></script> -->
+    <script src="lib/skulpt.min.js"></script>
+    <script src="lib/skulpt-stdlib.js"></script>
+</head>
+
+<body>
+
+    <div class="first">
+        <h1><span>HC</span> Code Editor</h1>
+        <div id="btn">
+            <button id="frontend">HTML + CSS + JS</button>
+            <button id="python">Python</button>
+            <button id="text/x-c++src">C++</button>
+        </div>
+    </div>
+    <section class="second">
+        <h1>For Python :</h1>
+        <div id="editor"></div>
+        <button onclick="runCode()">Run Code</button>
+        <h3>Output:</h3>
+        <pre id="output"></pre>
+
+        <button class="backtoHome"><img src="chevrons-left.png" width="100%"></button>
+    </section>
+
+    <section class="third">
+        <div class="thirdIn">
+        <div class="text">
+        <textarea id="html" class="code-editor"></textarea>
+        <textarea id="css" class="code-editor"></textarea>
+        <textarea id="js" class="code-editor"></textarea>
+       </div>
+        <div class="output-container">
+            <iframe id="output2"></iframe>
+        </div>
+       </div>
+        <button class="backtoHome"><img src="chevrons-left.png" width="100%"></button>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
