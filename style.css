@@ -351,3 +351,115 @@ iframe {
 .third{
     visibility: hidden;
 }
+
+
+/* for responsivness */
+/* General responsive styles */
+body {
+  font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+  body {
+      font-size: 15px;
+      padding: 15px;
+  }
+
+  .first {
+      margin-top: 20%;
+      text-align: center;
+  }
+
+  .first h1 {
+      font-size: 50px;
+  }
+
+  button {
+      font-size: 14px;
+      padding: 8px 16px;
+  }
+
+  #editor {
+      height: 250px;
+  }
+
+  #html, #css, #js {
+      height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+      font-size: 14px;
+      padding: 10px;
+  }
+
+  .first {
+      margin-top: 25%;
+  }
+
+  .first h1 {
+      font-size: 40px;
+  }
+
+  button {
+      font-size: 13px;
+      padding: 6px 12px;
+  }
+
+  .output-container, .text {
+      width: 100%;
+      margin-left: 0;
+  }
+
+  .thirdIn {
+      flex-direction: column;
+  }
+
+  iframe {
+      height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+      font-size: 12px;
+      padding: 5px;
+  }
+
+  .first h1 {
+      font-size: 30px;
+  }
+
+  button {
+      font-size: 12px;
+      padding: 5px 10px;
+  }
+
+  #editor {
+      height: 200px;
+  }
+
+  #html, #css, #js {
+      height: 200px;
+  }
+}
+
+@media (max-width: 320px) {
+  body {
+      font-size: 10px;
+  }
+
+  .first h1 {
+      font-size: 25px;
+  }
+
+  button {
+      font-size: 10px;
+      padding: 4px 8px;
+  }
+
+  iframe {
+      height: 250px;
+  }
+}
