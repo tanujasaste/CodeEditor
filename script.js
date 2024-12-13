@@ -199,6 +199,11 @@ function saveCode() {
     a.download = 'code.txt';
     a.click();
 }
+// toggle theme
+function toggleTheme() {
+    document.body.classList.toggle('dark-theme');
+}
+
 
 
 
