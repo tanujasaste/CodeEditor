@@ -1,3 +1,5 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 body {
     font-family: 'Roboto', Arial, sans-serif;
     background-color: #f4f4f9;
@@ -5,8 +7,9 @@ body {
     padding: 20px;
     margin: 0;
     line-height: 1.6;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
 }
 *{
     margin: 0;
@@ -49,6 +52,44 @@ button {
 button:hover {
     background-color: #2b6293;
 }
+.output-container #buttons{
+  display: flex;
+  justify-content: flex-end;
+}
+.third .output-container button {
+  margin: 2%;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.third .output-container button:hover {
+  background-color: #2980b9;
+}
+/* for python button */
+#header{
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+.second #buttons{
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.second button {
+  margin: 2%;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.second button:hover {
+  background-color: #2980b9;
+}
+
 
 /* CodeMirror Editor */
 #editor {
@@ -80,7 +121,7 @@ h3 {
 }
 pre {
     background-color: #1e1e2f;
-    color: #d4d4d4;
+    color: #0e0c0c;
     padding: 15px;
     border-radius: 5px;
     font-family: 'Courier New', Courier, monospace;
@@ -91,6 +132,96 @@ pre {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Custom context menu container */
+
+ul li {
+    list-style:none;
+  }
+  #contextMenu {
+    position:absolute;
+    transform-origin:top left;
+    transform:scale(0);
+    width:220px;
+    border:1px solid rgba(100,100,100,0.55);
+    padding:5px;
+    background:rgba(250,250,250,0.98);
+    box-shadow:2px 2px 12px 4px rgba(100,100,100,0.4);
+    transition:transform 400ms ease-in-out 50ms;
+  }
+  #contextMenu.visible {
+    transform:scale(1);
+  }
+  #contextMenu ul li {
+    padding:5px 3px;
+    display:flex;
+    align-items:center;
+    cursor:pointer;
+    color:rgba(50,50,50,0.9);
+    font-size:15px;
+  }
+  #contextMenu ul li:hover {
+    background:rgba(100,100,100,0.12);
+  }
+  #contextMenu ul li.disabled {
+    color:rgba(100,100,100,0.5);
+    cursor:pointer;
+  }
+  #contextMenu ul li.share {
+  /*   height:40px; */
+    width:100%;
+    flex-direction:column;
+    align-items:left;
+    flex-wrap:wrap;
+  }
+  #contextMenu ul li.share > .name {
+    margin-top:-2px;
+    margin-bottom:10px;
+    display:block;
+  }
+  
+  #contextMenu ul li.share .icons {
+    width:100%;
+    display:flex;
+    justify-content:space-around;
+  }
+  #contextMenu ul li.share .icons > i:hover{
+    background:#e7e7e7;
+  }
+  
+  #contextMenu ul li i {
+    width:20px; 
+  }
+  #contextMenu ul li div.name {
+    padding-left:8px;
+  }
+  #contextMenu div.break {
+    margin:4px 0px;
+    border-top:1px solid rgba(100,100,100,0.5);
+  }
+  
+  #pulse {
+    position:fixed;
+    width:35px;
+    height:35px;
+    background:rgba(0,0,0,1);
+    opacity:0;
+    border-radius:50%;
+    z-index:100;
+  }
+  #pulse.active {
+    animation:pulse 400ms ease;
+  }
+  
+  @keyframes pulse {
+    0% {
+      opacity:1;
+      transform:scale(0);
+    }
+    100% {
+      opacity:0;
+      transform:scale(1.1);
+    }
+  }
 /* Responsive Design */
 @media (max-width: 768px) {
     body {
